@@ -11,13 +11,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Automated Tests') {
             steps {
-                sh 'pytest --html=test-report.html --self-contained-html'
+                bat 'pytest --html=test-report.html --self-contained-html'
             }
         }
 
